@@ -1,7 +1,6 @@
 const path = require('path');
-const Workout = require('../models');
 const router = require("express").Router();
-const Exercise = require("../models/exercise");
+const Workout = require('../models/');
 
 // html routes
 router.get("/exercise", (req, res) => {
@@ -17,15 +16,12 @@ router.get('*', function(req, res) {
 })
 
 // api routes
-router.get("/api/workouts", (req, res) => {
+router.get(['/api/workouts'], (req, res) => {
   Workout.find({})
-    .sort({ date: -1 })
-    .then(dbWorkout => {
-      console.log(Workout);
-      console.log(dbWorkout)
-      res.json(dbWorkout);
+    .then((result) => {
+      res.json(result);
     })
-    .catch(err => {
+    .catch((err) => {
       res.status(400).json(err);
     });
 });
@@ -44,7 +40,7 @@ router.get("/api/workouts/range", (req, res) => {
 });
 
 router.post("/api/workouts", ({ body }, res) => {
-  Exercise.create(body)
+  Workout.create(body)
     .then(dbWorkout => {
       res.json(dbWorkout);
     })
