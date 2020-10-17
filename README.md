@@ -4,18 +4,16 @@ An application to track the distance, duration, and exercises of a workout, usin
 ## Table of Contents
 * [Installation](#installation)
 * [Usage](#usage)
+* [Screenshots](#screenshots)
 * [License](#license)
-* [Tests](#tests)
 * [Questions](#questions)
 ## Installation
 After cloning the repo, use `npm install` to install the dependencies.
 ## Usage
 Track your own workouts on the [deployed Heroku app](https://fitness-tracker-naegeli17.herokuapp.com/).
-### Screenshots
+## Screenshots
 ![image](https://user-images.githubusercontent.com/62922022/96355359-a0454d80-1095-11eb-8c55-8e5072820a33.png)
 ![image](https://user-images.githubusercontent.com/62922022/96355362-a5a29800-1095-11eb-8fec-3770083cfae0.png)
-## Tests
-Use `npm run test` to test the application.
 ## License
 ![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)
 
