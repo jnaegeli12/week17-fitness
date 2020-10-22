@@ -25,7 +25,7 @@ router.post(`/api/workouts`, ({ body }, res) => {
     .then(workout => {
       res.json(workout)
     }).catch(err => {
-      json(err)
+      res.json(err)
     });
 });
 
