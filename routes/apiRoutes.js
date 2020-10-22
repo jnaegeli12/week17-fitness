@@ -33,7 +33,7 @@ router.put(`/api/workouts/:id`, ({ body, params }, res) => {
   Workout.findOneAndUpdate({ _id: params.id }, { $push: { exercises: body } })
     .then(workout => res.json(workout))
     .catch(err => {
-      json(err);
+      res.json(err);
     });
 });
 
